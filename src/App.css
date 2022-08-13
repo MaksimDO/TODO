@@ -1,0 +1,223 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.todo {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(#d2c0c6, #CCABAF);
+}
+
+@media screen and (max-width: 767.98px) {
+  .todo {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .todo {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.todo-list {
+  position: relative;
+  min-width: 18.5rem;
+}
+
+.todo-list-item {
+  border: 2px solid #6F233F;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  margin-left: 0;
+  margin-bottom: .5rem;
+  margin-right: 2rem;
+  transition: margin-left .5s ease-in-out;
+}
+
+.todo-list-item:hover {
+  opacity: .7;
+}
+
+.todo-list-item-active {
+  border: 2px solid #6F233F;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  margin-left: 10%;
+  margin-bottom: .5rem;
+  transition: margin-left .5s ease-in-out;
+}
+
+.todo-title {
+  color: #6F233F;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-list-filter {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todo-list-input {
+  border: 2px solid #6F233F;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: auto;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.todo-list-resizer {
+  position: absolute;
+  background: linear-gradient(#d2c0c6, #CCABAF);
+  cursor: w-resize;
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 2rem;
+}
+
+.todo-list-resizer-r {
+  width: 1rem;
+  height: 1rem;
+  border: .28rem solid #6F233F;
+  border-radius: .25rem;
+  background-color: #6F233F;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translate(50%, 50%) rotate(45deg);
+  transition: transform .5s ease-in-out;
+}
+
+.todo-list-resizer-r:hover {
+  transform: translate(25px, 50%) rotate(135deg);
+  transition: transform .5s ease-in-out;
+}
+
+.todo-edit-input {
+  border: 2px solid #6F233F;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border: 2px solid #6F233F;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  scale: 1;
+}
+
+.btn-click {
+  border: 2px solid #6F233F;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  animation-duration: .3s;
+  animation-name: click;
+}
+
+@keyframes click {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1;
+  }
+  50% {
+    scale: .9;
+    border: 2px solid #000;
+  }
+}
+
+.btn:hover {
+  opacity: .7;
+}
+
+.todo-edit-add {
+  background-color: #C1CBD4;
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-edit-edit {
+  display: flex;
+  background-color: #CCABAF;
+  margin-bottom: 1rem;
+}
+
+.todo-edit-delete {
+  background-color: #CCABAF;
+  margin-bottom: 1rem;
+}
+
+.todo-edit-started {
+  background-color: #8595A4;
+  margin-bottom: 1rem;
+}
+
+.todo-edit-completed {
+  background-color: #85A090;
+}
+
+.todo-edit-section-input {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.todo-edit-section-edit {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.todo-edit-section-calendar {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.calendar {
+  border: 2px solid #6F233F !important;
+  border-radius: 1rem;
+  padding: .5rem;
+  background: linear-gradient(#CCABAF, #d2c0c6) !important;
+}
+
+.react-calendar__tile--active,
+.react-calendar__tile--now {
+  border-radius: .5rem;
+  background-color: #6F233F !important;
+}
+
+.react-calendar__tile:hover,
+.react-calendar__tile:hover,
+.react-calendar__navigation__arrow:hover,
+.react-calendar__navigation__label:hover {
+  border-radius: .5rem;
+  background-color: #6F233F !important;
+}
